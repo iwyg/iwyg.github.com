@@ -1,0 +1,75 @@
+@import 'scss/_mixins.scss';
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+.block {
+	height: 100%;
+	width: 960px;
+	margin: auto;
+	position: relative;
+}
+.layer-1, 
+.layer-2,
+.layer-3,
+.layer-4 {
+	position: absolute;
+}
+.layer-1 {
+	width: 140px;
+	height: 140px;
+	z-index: 1;
+	background: #202020;
+	@include opacity(0.7);
+	@include border-radius(70px);
+	&.pos1 {
+		left: 140px;
+	}
+	&.pos2,&.pos3 {
+		left: 420px;
+	}
+
+}
+.layer-2 {
+	width: 120px;
+	height: 120px;
+	@include opacity(0.5);
+	@include border-radius(60px);
+	z-index: 2;
+	background: red;
+	&.pos1 {
+		left: 220px;
+	}
+	&.pos2,&.pos3 {
+		left: 340px;
+	}
+}
+.layer-3 {
+	width: 100px;
+	height: 100px;
+	@include opacity(0.3);
+	z-index: 3;
+	background: green;
+	@include border-radius(50px);
+	&.pos1 {
+		left: 100px;
+	}
+	&.pos2,&.pos3 {
+		left: 470px;
+	}
+}
+.layer-4 {
+	width: 80px;
+	height: 80px;
+	@include opacity(0.2);
+	z-index: 3;
+	background: blue;
+	@include border-radius(40px);
+	&.pos1 {
+		left: 200px;
+	}
+	&.pos2,&.pos3 {
+		left: 320px;
+	}
+}

@@ -1,0 +1,192 @@
+
+@mixin opacity ($val, $msie: false) {
+/** 
+ * -------------------------
+ * $bundle style: opcaity
+ * ------------------------
+ */
+	-webkit-opacity: $val;
+	   -moz-opacity: $val;
+		 -o-opacity: $val;
+			opacity: $val;
+
+	@if $msie == true {
+		$v:  $val * 100;
+		filter:alpha(opacity=$v);
+	}		
+}
+
+@mixin border-radius( $radius: 3px ) {
+/* -------------------------
+* $bundle style: border-radius
+* ------------------------*/
+	  -webkit-border-radius: $radius;
+		 -moz-border-radius: $radius;
+			  border-radius: $radius;
+	-webkit-background-clip: padding-box;
+	   -moz-background-clip: padding;
+			background-clip: padding-box;
+}
+@mixin background-size($prop: cover) {
+/* -------------------------
+* $bundle style: background-size
+* ------------------------*/
+	-webkit-background-size: $prop;
+	   -moz-background-size: $prop;
+		 -o-background-size: $prop;
+		-ms-background-size: $prop;
+			background-size: $prop;
+}
+@mixin outline-radius( $radius: 3px ) {
+/** -------------------------
+ * $bundle style: outline-radius
+ * ------------------------
+ */
+	-webkit-outline-radius: $radius;
+	   -moz-outline-radius: $radius;
+			outline-radius: $radius;
+}
+@mixin box-shadow($x : 2px, $y : 2px, $blur : 5px, $spread : 0, $color : rgba(0,0,0,.6)) {
+/* -------------------------
+* $bundle style: box-shadow
+* ------------------------*/
+	-webkit-box-shadow: $arguments;
+		 -moz-box-shadow: $arguments;
+			box-shadow: $arguments;
+}
+
+@mixin box-shadow-inset($x : 2px, $y : 2px, $blur : 5px, $spread : 0, $color : rgba(0,0,0,.6) ) {
+/* -------------------------
+* $bundle style: box-shadow-inset
+* ------------------------*/
+	-webkit-box-shadow: inset $arguments;
+		 -moz-box-shadow: inset $arguments;
+			box-shadow: inset $arguments;
+}
+@mixin linear-gradient($begin: black, $end: white, $switch : 100%) {
+/* -------------------------
+* $bundle style: linear-gradient
+* ------------------------*/
+	background-image:  $begin;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from($begin), color-stop($switch, $end));
+	background-image: -webkit-linear-gradient(top, $begin, $end $switch);
+	background-image:    -moz-linear-gradient(top, $begin, $end $switch);
+	background-image:     -ms-linear-gradient(top, $begin, $end $switch);
+	background-image:      -o-linear-gradient(top, $begin, $end $switch);
+	background-image:         linear-gradient(top, $begin, $end $switch);
+}
+
+@mixin double-borders($colorOne : green, $colorTwo : red, $radius : 0) {
+/* -------------------------
+* $bundle style: double-borders
+* ------------------------*/
+	border: 1px solid $colorOne;
+
+	-webkit-box-shadow: 0 0 0 1px $colorTwo;
+		 -moz-box-shadow: 0 0 0 1px $colorTwo;
+			box-shadow: 0 0 0 1px $colorTwo;
+
+	@include border-radius($radius);
+}
+
+@mixin triple-borders($colorOne : green, $colorTwo : red, $colorThree : blue, $radius : 0) {
+/* -------------------------
+* $bundle style: triple-borders
+* ------------------------*/
+	border: 1px solid $colorOne;
+
+
+	-webkit-box-shadow: 0 0 0 1px $colorTwo, 0 0 0 2px $colorThree;
+		 -moz-box-shadow: 0 0 0 1px $colorTwo, 0 0 0 2px $colorThree;
+			box-shadow: 0 0 0 1px $colorTwo, 0 0 0 2px $colorThree;
+
+	@include border-radius($radius);
+}
+
+@mixin text-shadow($color: #fff, $a : 1px, $b : 0, $c : 1px) {
+	-webkit-text-shadow: $arguments;
+		 -moz-text-shadow: $arguments;
+			text-shadow: $arguments;
+}
+/* -------------------------
+ * $bundle fx: transition
+ * ------------------------*/
+@mixin transition($what : all, $length : 1s, $easing : ease-in-out, $delay : 0s) {
+	-webkit-transition: $arguments;
+		 -moz-transition: $arguments;
+		-ms-transition: $arguments;
+		 -o-transition: $arguments;
+			transition: $arguments;
+}
+
+/* -------------------------
+ * $bundle fx: transform
+ * ------------------------*/
+@mixin transform($params) {
+	-webkit-transform: $params;
+		 -moz-transform: $params;
+		-ms-transform: $params;
+		 -o-transform: $params;
+			transform: $params;
+}
+
+@mixin transform-origin($params) {
+	-webkit-transform-origin: $params;
+		 -moz-transform-origin: $params;
+		-ms-transform-origin: $params;
+		 -o-transform-origin: $params;
+			transform-origin: $params;
+}
+
+
+@mixin box($orient : horizontal, $pack : center,$align : center) {
+
+	display:			-webkit-box;
+	display:			-moz-box;
+	display:			box;
+
+	-webkit-box-orient: $orient;
+		 -moz-box-orient: $orient;
+			box-orient: $orient;
+
+	-webkit-box-pack: $pack;
+		 -moz-box-pack: $pack;
+			box-pack: $pack;
+
+	-webkit-box-align: $align;
+		 -moz-box-align: $align;
+			box-align: $align;
+}
+
+@mixin flex($val: 1) {
+	-webkit-box-flex: $val;
+		 -moz-box-flex: $val;
+			box-flex: $val;
+}
+@mixin flex-group($val : 1) {
+	-webkit-box-flex-group: $val;
+		 //-moz-box-flex-group: $val;
+			box-flex-group: $val;
+}
+
+@mixin resize($direction) {
+	-webkit-resize: $direction;
+		 -moz-resize: $direction;
+			resize: $direction;
+}
+@mixin box-sizing( $type : border-box ) {
+	-webkit-box-sizing: $type;
+		 -moz-box-sizing: $type;
+		 -ms-box-sizing: $type;
+			box-sizing: $type;
+}
+
+@mixin columns($count : 3, $gap : 10) {
+	-webkit-column-count: $count;
+		 -moz-column-count: $count;
+			column-count: $count;
+
+	-webkit-column-gap: $gap;
+		 -moz-column-gap: $gap;
+			column-gap: $gap;
+}

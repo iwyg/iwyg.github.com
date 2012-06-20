@@ -1,0 +1,133 @@
+/* -------------------------
+ * $bundle fx: transition
+ * ------------------------*/
+/* -------------------------
+ * $bundle fx: transform
+ * ------------------------*/
+html, body {
+  height: 100%;
+  width: 100%; }
+
+.block {
+  height: 100%;
+  width: 960px;
+  margin: auto;
+  position: relative; }
+
+.layer-1,
+.layer-2,
+.layer-3,
+.layer-4 {
+  position: absolute; }
+
+.layer-1 {
+  width: 140px;
+  height: 140px;
+  z-index: 1;
+  background: #202020;
+  /** 
+   * -------------------------
+   * $bundle style: opcaity
+   * ------------------------
+   */
+  -webkit-opacity: 0.7;
+  -moz-opacity: 0.7;
+  -o-opacity: 0.7;
+  opacity: 0.7;
+  /* -------------------------
+  * $bundle style: border-radius
+  * ------------------------*/
+  -webkit-border-radius: 70px;
+  -moz-border-radius: 70px;
+  border-radius: 70px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+  .layer-1.pos1 {
+    left: 140px; }
+  .layer-1.pos2, .layer-1.pos3 {
+    left: 420px; }
+
+.layer-2 {
+  width: 120px;
+  height: 120px;
+  /** 
+   * -------------------------
+   * $bundle style: opcaity
+   * ------------------------
+   */
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  -o-opacity: 0.5;
+  opacity: 0.5;
+  /* -------------------------
+  * $bundle style: border-radius
+  * ------------------------*/
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  border-radius: 60px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  z-index: 2;
+  background: red; }
+  .layer-2.pos1 {
+    left: 220px; }
+  .layer-2.pos2, .layer-2.pos3 {
+    left: 340px; }
+
+.layer-3 {
+  width: 100px;
+  height: 100px;
+  /** 
+   * -------------------------
+   * $bundle style: opcaity
+   * ------------------------
+   */
+  -webkit-opacity: 0.3;
+  -moz-opacity: 0.3;
+  -o-opacity: 0.3;
+  opacity: 0.3;
+  z-index: 3;
+  background: green;
+  /* -------------------------
+  * $bundle style: border-radius
+  * ------------------------*/
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+  .layer-3.pos1 {
+    left: 100px; }
+  .layer-3.pos2, .layer-3.pos3 {
+    left: 470px; }
+
+.layer-4 {
+  width: 80px;
+  height: 80px;
+  /** 
+   * -------------------------
+   * $bundle style: opcaity
+   * ------------------------
+   */
+  -webkit-opacity: 0.2;
+  -moz-opacity: 0.2;
+  -o-opacity: 0.2;
+  opacity: 0.2;
+  z-index: 3;
+  background: blue;
+  /* -------------------------
+  * $bundle style: border-radius
+  * ------------------------*/
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+  .layer-4.pos1 {
+    left: 200px; }
+  .layer-4.pos2, .layer-4.pos3 {
+    left: 320px; }
