@@ -1,0 +1,31 @@
+CACHE MANIFEST
+ 
+# Offline cache v1
+# html files
+index..html
+ 
+# css files
+css/style.css
+ 
+# js files
+js/require.js
+js/init.js
+js/libs/es5shim.js
+js/libs/core.js
+js/modules/clock.js
+js/modules/clockone.js
+js/main.js 
+
+# fonts
+assets/fonts/melbourne_bold-webfont.eot
+assets/fonts/melbourne_bold-webfont.woff
+assets/fonts/melbourne_bold-webfont.svg
+assets/fonts/melbourne_bold-webfont.ttf
+assets/fonts/melbourne_light-webfont.eot
+assets/fonts/melbourne_light-webfont.woff
+assets/fonts/melbourne_light-webfont.svg
+assets/fonts/melbourne_light-webfont.ttf
+assets/fonts/melbourne_reg-webfont.eot
+assets/fonts/melbourne_reg-webfont.woff
+assets/fonts/melbourne_reg-webfont.svg
+assets/fonts/melbourne_reg-webfont.ttf

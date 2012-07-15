@@ -1,12 +1,9 @@
-(function (plugin, define, window) {
-	if (typeof define === 'function' && define.amd)	{
-		define(['jquery'], plugin);
-	} else {
-		plugin(window.jQuery);
-	}
+(function (plugin, define, require, window) {
+	var $ = (typeof define === 'function' && define.amd) ? require('jquery') : this.jQuery;
+	plugin($);
 }(function ($) {
 		if (typeof $.fn.bullseye !== 'function') {
-			console.log('bullseye not found');
+			console && console.log('bullseye not found');
 		}
 		var defaults = {
 			context: document,
@@ -152,6 +149,5 @@
 			pb.context.scroll($.proxy(pb._doAnimate, pb));
 			return pb;
 		};
-	}, this.define, this
-
+	}, this.define, this.require, this
 ));
